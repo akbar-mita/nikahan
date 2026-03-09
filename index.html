@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan Pernikahan Mita & Akbar</title>
+<meta property="og:title" content="Undangan Pernikahan Mita & Akbar">
+<meta property="og:description" content="Dengan memohon rahmat dan ridha Allah SWT, kami mengundang kehadiran Bapak/Ibu/Saudara/i">
+<meta property="og:image" content="https://drive.google.com/thumbnail?id=1-TlTi4O2KtRJ1Fd58vTo-1v6hHA1bSyd&sz=w800">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:100%; height:100%; overflow:hidden; background:#0e0b0d; }
+  iframe {
+    width:100%;
+    height:100%;
+    border:none;
+    display:block;
+  }
+</style>
+</head>
+<body>
+<script>
+  // Ambil nama tamu dari URL ?to=Nama
+  const params  = new URLSearchParams(window.location.search);
+  const namaTo  = params.get('to') || 'Tamu Undangan';
+
+  // URL Apps Script
+  const BASE    = 'https://script.google.com/macros/s/AKfycbzGVRzvd8d47oKdRhx7ciysss2Cr8dj66c5rQhRKRRTj6WSQqSWLMdk2NY2ZznYU0Nq/exec';
+  const fullURL = BASE + '?to=' + encodeURIComponent(namaTo);
+
+  // Buat iframe fullscreen
+  const iframe  = document.createElement('iframe');
+  iframe.src    = fullURL;
+  iframe.setAttribute('allowfullscreen', '');
+  iframe.setAttribute('allow', 'autoplay');
+  document.body.appendChild(iframe);
+</script>
+</body>
+</html>
